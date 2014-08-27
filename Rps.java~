@@ -8,10 +8,6 @@ public class Rps{
         String a = "rock";
         String b = "paper";
         String c = "scissors";
-        if(!a.equals(user) && !b.equals(user) && !c.equals(user)){
-            System.out.println("Please check your spelling, the computer is very picky!");
-        }
-        else{
         if (comp <= 0.33333){
             System.out.println("Computer Choose: rock");
             if (a.equals(user)){
@@ -48,6 +44,5 @@ public class Rps{
                 System.out.println("Draw!");
             }
         }
-    }
     }
 }
