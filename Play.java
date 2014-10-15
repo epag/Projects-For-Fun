@@ -10,7 +10,7 @@ public class Play {
 	public String[][] random() {
 		for (int a = 0; a < 50; a++) {
 			for (int b = 0; b < 100; b++) {
-				if (Math.random() < .80)
+				if (Math.random() < .90)
 					board[a][b] = " ";
 				else
 					board[a][b] = "*";
@@ -60,8 +60,12 @@ public class Play {
 					nextBoard[a][b] = " ";
 				if (checker(a, b, board) > 3)
 					nextBoard[a][b] = " ";
-				if (checker(a, b, board) == 2)
+				if (checker(a, b, board) == 2){
+					if (board[a][b].toString().equals("*"))
+						nextBoard[a][b] = "*";
+					else
 					nextBoard[a][b] = " ";
+				}
 				if (checker(a, b, board) == 3)
 					nextBoard[a][b] = "*";
 				System.out.print(nextBoard[a][b]);
@@ -87,12 +91,10 @@ public class Play {
 	public static void main(String[] args) {
 		Play p = new Play();
 		p.random();
-		int a = 0;
-		while (a < 100) {
+		while (true) {
 			p.nextBoard();
-			a++;
 			try {
-				Thread.sleep(1000); // 1000 milliseconds is one second.
+				Thread.sleep(500); // 1000 milliseconds is one second.
 			} catch (InterruptedException ex) {
 				Thread.currentThread().interrupt();
 			}
