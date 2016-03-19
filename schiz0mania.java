@@ -3,6 +3,6 @@
 
 public class schiz0mania {
   while(1) {
-    system.out.println("We love schizo");
+    System.out.println("We love schizo");
   }
 }
