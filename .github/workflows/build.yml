@@ -40,4 +40,4 @@ jobs:
       run: echo "step 4"
 
     - name: Creating md5
-      run: echo "step 5"
+      run: run: echo "step 5"
