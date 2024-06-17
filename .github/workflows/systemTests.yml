@@ -48,4 +48,4 @@ jobs:
 
     # Run systests
     - name: Systests With Self-contained Process
-      run: run: echo "step 14"
+      run: echo "step 14"
