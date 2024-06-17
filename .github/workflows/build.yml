@@ -38,5 +38,5 @@ jobs:
     - name: Create systests zip
       run: echo "step 4"
 
-    - name: Creating md5
-      run: exit 1
+    #- name: Creating md5
+      #run: exit 1
